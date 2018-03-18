@@ -1,0 +1,94 @@
+{
+    "languageModel": {
+        "invocationName": "guten morgen",
+        "intents": [
+            {
+                "name": "AMAZON.CancelIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.HelpIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.StopIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "Ja_Bitte",
+                "slots": [
+                    {
+                        "name": "Tassen",
+                        "type": "AMAZON.NUMBER",
+                        "samples": [
+                            "{Tassen}",
+                            "{Tassen} Tassen"
+                        ]
+                    }
+                ],
+                "samples": [
+                    "ja {Tassen}",
+                    "{Tassen}",
+                    "gerne",
+                    "ja bitte {Tassen} Tassen",
+                    "Ja {Tassen} Tassen",
+                    "Ja Bitte",
+                    "Ja"
+                ]
+            }
+        ],
+        "types": []
+    },
+    "dialog": {
+        "intents": [
+            {
+                "name": "Ja_Bitte",
+                "confirmationRequired": false,
+                "prompts": {},
+                "slots": [
+                    {
+                        "name": "Tassen",
+                        "type": "AMAZON.NUMBER",
+                        "confirmationRequired": false,
+                        "elicitationRequired": true,
+                        "prompts": {
+                            "elicitation": "Elicit.Slot.477631287027.1034623439562"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "prompts": [
+        {
+            "id": "Elicit.Slot.1210143709036.1050314467884",
+            "variations": [
+                {
+                    "type": "PlainText",
+                    "value": "Wie viele Tassen soll ich machen?"
+                }
+            ]
+        },
+        {
+            "id": "Confirm.Intent.1210143709036",
+            "variations": [
+                {
+                    "type": "PlainText",
+                    "value": "Ich mache jetzt {Kaffe_Tassen} Tassen Kaffe ok?"
+                }
+            ]
+        },
+        {
+            "id": "Elicit.Slot.477631287027.1034623439562",
+            "variations": [
+                {
+                    "type": "PlainText",
+                    "value": "Wie viele Tassen soll ich kochen"
+                }
+            ]
+        }
+    ]
+}
